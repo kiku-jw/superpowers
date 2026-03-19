@@ -57,6 +57,23 @@ Codex has native skill discovery — it scans `~/.agents/skills/` at startup, pa
 
 The `using-superpowers` skill is discovered automatically and enforces skill usage discipline — no additional configuration needed.
 
+## Codex Autonomous Delivery
+
+Superpowers now includes a Codex-first autonomous lane for users who want to stay inside Codex for planning, implementation, verification, and final handoff.
+
+Use `codex-autonomous-delivery` when you want Codex to:
+
+- turn a rough task into durable execution docs under git
+- keep moving from plan to implementation to verification with minimal babysitting
+- prefer terminal Codex helper lanes for bounded work
+- use AGX only as optional skeptical review or cheap bounded help, not as the main control plane
+
+Example prompt:
+
+```text
+Use codex-autonomous-delivery to turn this rough feature into a plan, implement it, verify it, and only use AGX if a skeptical outside review is worth it.
+```
+
 ## Usage
 
 Skills are discovered automatically. Codex activates them when:

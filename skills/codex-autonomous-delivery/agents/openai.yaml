@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Autonomous Delivery"
+  short_description: "Codex-first autonomous delivery with AGX review."
+  default_prompt: "Use codex-autonomous-delivery to plan, implement, verify, and optionally route skeptical review through AGX without leaving Codex."

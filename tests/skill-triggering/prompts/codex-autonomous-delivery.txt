@@ -1,0 +1,1 @@
+I want to stay inside Codex for this feature: turn the rough request into a concrete plan under git, implement it autonomously, verify it yourself, and only use AGX if an outside skeptical review is genuinely helpful.

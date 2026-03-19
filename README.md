@@ -10,7 +10,9 @@ Once it's teased a spec out of the conversation, it shows it to you in chunks sh
 
 After you've signed off on the design, your agent puts together an implementation plan that's clear enough for an enthusiastic junior engineer with poor taste, no judgement, no project context, and an aversion to testing to follow. It emphasizes true red/green TDD, YAGNI (You Aren't Gonna Need It), and DRY. 
 
-Next up, once you say "go", it launches a *subagent-driven-development* process, having agents work through each engineering task, inspecting and reviewing their work, and continuing forward. It's not uncommon for Claude to be able to work autonomously for a couple hours at a time without deviating from the plan you put together.
+For the classic Claude-centric path, once you say "go", it launches a *subagent-driven-development* process, having agents work through each engineering task, inspecting and reviewing their work, and continuing forward. It's not uncommon for Claude to be able to work autonomously for a couple hours at a time without deviating from the plan you put together.
+
+For the Codex-first path, `codex-autonomous-delivery` keeps planning, implementation, and verification in one main Codex lane, and only reaches for outside help when a bounded AGX review or helper packet is actually worth it.
 
 There's a bunch more to it, but that's the core of the system. And because the skills trigger automatically, you don't need to do anything special. Your coding agent just has Superpowers.
 
@@ -72,6 +74,8 @@ Fetch and follow instructions from https://raw.githubusercontent.com/obra/superp
 
 **Detailed docs:** [docs/README.codex.md](docs/README.codex.md)
 
+If you want a Codex-first autonomous loop after installation, ask for `codex-autonomous-delivery`.
+
 ### OpenCode
 
 Tell OpenCode:
@@ -99,6 +103,9 @@ gemini extensions update superpowers
 Start a new session in your chosen platform and ask for something that should trigger a skill (for example, "help me plan this feature" or "let's debug this issue"). The agent should automatically invoke the relevant superpowers skill.
 
 ## The Basic Workflow
+
+The numbered workflow below is the classic Superpowers path.
+For Codex users who want one main agent to carry the work from planning through verification, `codex-autonomous-delivery` is the preferred Codex-first alternative with optional AGX review.
 
 1. **brainstorming** - Activates before writing code. Refines rough ideas through questions, explores alternatives, presents design in sections for validation. Saves design document.
 
@@ -132,6 +139,7 @@ Start a new session in your chosen platform and ask for something that should tr
 - **writing-plans** - Detailed implementation plans
 - **executing-plans** - Batch execution with checkpoints
 - **dispatching-parallel-agents** - Concurrent subagent workflows
+- **codex-autonomous-delivery** - Codex-first end-to-end delivery with durable docs, autonomous execution, verification, and optional AGX review
 - **requesting-code-review** - Pre-review checklist
 - **receiving-code-review** - Responding to feedback
 - **using-git-worktrees** - Parallel development branches
