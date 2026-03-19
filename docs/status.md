@@ -39,7 +39,7 @@ test -f docs/plans/2026-03-18-codex-autonomous-delivery.md
 test -f docs/status.md
 test -f docs/test-plan.md
 test -f skills/codex-autonomous-delivery/SKILL.md
-python3 /Users/nick/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/codex-autonomous-delivery
+python3 "$CODEX_HOME"/skills/.system/skill-creator/scripts/quick_validate.py skills/codex-autonomous-delivery
 rg -n "codex-autonomous-delivery|AGX|autonomous" README.md docs/README.codex.md skills/codex-autonomous-delivery
 ```
 
@@ -50,8 +50,8 @@ rg -n "codex-autonomous-delivery|AGX|autonomous" README.md docs/README.codex.md 
 | Date | Milestone | Files | Commands | Result | Next |
 | --- | --- | --- | --- | --- | --- |
 | 2026-03-18 | M1 setup | `docs/plans/2026-03-18-codex-autonomous-delivery.md`, `docs/status.md`, `docs/test-plan.md` | `test -f docs/plans/2026-03-18-codex-autonomous-delivery.md && test -f docs/status.md && test -f docs/test-plan.md` | pass | Add the Codex-first skill |
-| 2026-03-18 | M2-M4 skill + docs slice | `skills/codex-autonomous-delivery/`, `README.md`, `docs/README.codex.md`, `tests/skill-triggering/prompts/codex-autonomous-delivery.txt` | `python3 /Users/nick/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/codex-autonomous-delivery && rg -n "codex-autonomous-delivery|AGX|autonomous" README.md docs/README.codex.md skills/codex-autonomous-delivery` | pass | Live trigger smoke |
-| 2026-03-18 | PRD discipline update | `skills/codex-autonomous-delivery/SKILL.md`, `docs/status.md` | `python3 /Users/nick/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/codex-autonomous-delivery` | pass | Live trigger smoke |
+| 2026-03-18 | M2-M4 skill + docs slice | `skills/codex-autonomous-delivery/`, `README.md`, `docs/README.codex.md`, `tests/skill-triggering/prompts/codex-autonomous-delivery.txt` | `python3 "$CODEX_HOME"/skills/.system/skill-creator/scripts/quick_validate.py skills/codex-autonomous-delivery && rg -n "codex-autonomous-delivery|AGX|autonomous" README.md docs/README.codex.md skills/codex-autonomous-delivery` | pass | Live trigger smoke |
+| 2026-03-18 | PRD discipline update | `skills/codex-autonomous-delivery/SKILL.md`, `docs/status.md` | `python3 "$CODEX_HOME"/skills/.system/skill-creator/scripts/quick_validate.py skills/codex-autonomous-delivery` | pass | Live trigger smoke |
 
 ## Smoke / Demo Checklist
 - [x] New Codex-first skill exists
